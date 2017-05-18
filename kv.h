@@ -1,3 +1,7 @@
+
+#ifndef KV_H
+#define KV_H
+
 #include <map>
 #include <vector>
 
@@ -15,3 +19,5 @@ public:
   virtual ~Kv(){};
 };
 }
+
+#endif /* KV_H */

@@ -34,6 +34,7 @@ int main(int argc, char *argv[]) {
   // Iterate over each item in the database and print them
   leveldb::Iterator *it = db->NewIterator(leveldb::ReadOptions());
 
+  cout << "================================" << endl;
   for (it->SeekToFirst(); it->Valid(); it->Next()) {
     cout << it->key().ToString() << " : " << it->value().ToString() << endl;
   }

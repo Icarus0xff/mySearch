@@ -1,3 +1,6 @@
+#ifndef ANALYZER_H
+#define ANALYZER_H
+
 namespace nsanalyzer {
 class Analyzer {
 
@@ -7,3 +10,5 @@ public:
 };
 
 } // nsanalyzer
+
+#endif /* ANALYZER_H */

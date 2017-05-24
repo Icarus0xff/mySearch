@@ -2,27 +2,22 @@
 #ifndef INDEX_H
 #define INDEX_H
 
-#include "include/json.hpp"
-#include "kv.h"
+#include "document_type.h"
 #include <string>
 
 namespace nsindex {
-using namespace kv_store;
-using namespace nlohmann;
+using namespace std;
+using namespace nsdocument;
 
 class Index {
-  int64_t id;
-  string name;
   string path;
-  vector<int64_t> document_ids;
-  kv_store::Kv inverted_index;
-
 public:
-  Index(){};
+  Index():path("./temp.db"){};
+  Index(string path):path(path){};
   virtual ~Index(){};
 
-  void index(uint64_t, json &);
+  void index(uint64_t, Document &);
 };
-}
 
+} // nsindex
 #endif /* INDEX_H */
